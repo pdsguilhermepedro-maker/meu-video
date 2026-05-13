@@ -56,7 +56,7 @@ video {
   <p>Ativar som e iniciar vídeo</p>
 </div>
 
-<video id="video" playsinline>
+<video id="video" playsinline controls>
   <source src="teste.mp4" type="video/mp4">
 </video>
 
@@ -68,6 +68,19 @@ function playVideo() {
   start.style.display = "none";
   video.play();
 }
+
+// clique no vídeo para pausar / continuar
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.getElementById('video');
+
+  video.addEventListener("click", () => {
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  });
+});
 </script>
 
 </body>
