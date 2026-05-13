@@ -51,12 +51,14 @@ video {
 
 <body>
 
+<!-- Tela inicial -->
 <div id="start" onclick="playVideo()">
   <h1>▶ Toque para assistir</h1>
   <p>Ativar som e iniciar vídeo</p>
 </div>
 
-<video id="video" playsinline controls>
+<!-- Vídeo -->
+<video id="video" playsinline>
   <source src="teste.mp4" type="video/mp4">
 </video>
 
@@ -69,7 +71,7 @@ function playVideo() {
   video.play();
 }
 
-// clique no vídeo para pausar / continuar
+// clique no vídeo = play/pause em qualquer momento
 document.addEventListener("DOMContentLoaded", () => {
   const video = document.getElementById('video');
 
