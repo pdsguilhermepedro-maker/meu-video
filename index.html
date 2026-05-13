@@ -10,24 +10,21 @@ html, body {
   margin: 0;
   background: black;
   height: 100%;
-  overflow: hidden;
 }
 
-iframe {
+video {
   width: 100%;
   height: 100%;
-  border: none;
+  object-fit: cover;
 }
 </style>
 </head>
 
 <body>
 
-<iframe 
-src="https://www.youtube.com/embed/1MSRGckwdNk?autoplay=1&rel=0"
-allow="autoplay; fullscreen"
-allowfullscreen>
-</iframe>
+<video autoplay muted playsinline controls>
+  <source src="video.mp4" type="video/mp4">
+</video>
 
 </body>
 </html>
